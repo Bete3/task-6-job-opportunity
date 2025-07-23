@@ -1,36 +1,98 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Job Listing Application 🚀
 
-## Getting Started
+A modern, responsive job listing application built with Next.js, TypeScript, and Tailwind CSS. This application allows users to browse job opportunities, view detailed job descriptions, and explore various positions across different companies.
 
-First, run the development server:
+## ✨ Features
+
+- **Responsive Design**: Works perfectly on desktop, tablet, and mobile devices
+- **Job Cards**: Interactive job cards with company logos and key information
+- **Detailed Job Pages**: Comprehensive job descriptions with all necessary details
+- **Dynamic Routing**: Navigate between job listings and individual job pages
+- **Company Branding**: Custom company logos with fallback system
+- **Sorting Options**: Sort jobs by relevance, date, and other criteria
+- **TypeScript**: Full type safety throughout the application
+
+
+
+### 1. Install dependencies
+
+```bash
+npm install
+# or
+yarn install
+```
+
+### 2. Run the development server
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+end-nextjs/
+├── app/                    # Next.js App Router
+│   ├── job/
+│   │   └── [id]/
+│   │       └── page.tsx   # Individual job page
+│   ├── globals.css        # Global styles
+│   ├── layout.tsx         # Root layout
+│   └── page.tsx          # Home page
+├── components/            # React components
+│   ├── JobCard.tsx       # Job card component
+│   ├── JobDetails.tsx    # Job details page component
+│   └── JobListingDashboard.tsx # Main dashboard
+├── data/                 # Static data
+│   └── jobs.ts          # Job listings data
+├── types/               # TypeScript type definitions
+│   └── job.ts          # Job interface
+├── public/             # Static assets
+│   └── logos/         # Company logos
+└── ...config files
+```
 
-## Learn More
+## 🎨 Components Overview
 
-To learn more about Next.js, take a look at the following resources:
+### JobListingDashboard
+The main dashboard component that displays all job opportunities with sorting functionality.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### JobCard
+Individual job card component showing:
+- Company logo
+- Job title and company name
+- Location and posting details
+- Job description preview
+- Category tags
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### JobDetails
+Detailed job page component featuring:
+- Complete job description
+- Responsibilities and requirements
+- Company information
+- Application details
+- Skills and categories
 
-## Deploy on Vercel
+## 🎯 Key Features Explained
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Dynamic Routing
+- `/` - Main job listings page
+- `/job/[id]` - Individual job details page
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## 📸 Screenshots
+
+### Job Listings Dashboard
+<img width="742" height="473" alt="image" src="https://github.com/user-attachments/assets/b23ce5fe-03ab-4a6b-8213-aa4f74a76bbd" />
+
+
+### Job Details Page
+<img width="791" height="470" alt="image" src="https://github.com/user-attachments/assets/d13cb469-6750-4733-a1a0-f0b7f2705edb" />
+
+
+
+
